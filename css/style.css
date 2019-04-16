@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400");
+/*____________MainColors____________*/
+:root {
+  --light-shades: #ffffff;
+  --light-accent: #17678b;
+  --main-brand: #11a8e7;
+  --dark-accent: #062a38;
+  --dark-shades: #222222;
+}
+
+/*____________Typography____________*/
+:root {
+  --font-family-main: 'Roboto Slab', serif;
+  --font-style-main: normal;
+  --font-stretch-main: normal;
+  --letter-spacing-main: normal;
+  --font-weight-main: normal;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--dark-shades);
+}
+
+.block-title {
+  font-size: 30px;
+  line-height: 1.33;
+  color: var(--dark-shades);
+}
+
+.subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.53;
+  color: var(--dark-shades);
+}
+
+.heading-large {
+  font-size: 70px;
+  font-weight: 100;
+  line-height: 1.14;
+  color: var(--main-brand);
+}
+
+.heading {
+  font-size: 24px;
+  line-height: 1.42;
+  color: var(--dark-shades);
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.44;
+  color: var(--dark-shades);
+}
+
+.body-text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.47;
+  color: var(--dark-shades);
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 1.67;
+  color: var(--dark-shades);
+}
+
+.link {
+  font-size: 12px;
+  line-height: 1.83;
+  color: var(--main-brand);
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.42;
+  color: var(--main-brand);
+}
+
+/*____________MainStyles____________*/
+body {
+  font-family: var(--font-family-main);
+  font-style: var(--font-style-main);
+  font-stretch: var(--font-stretch-main);
+  letter-spacing: var(--letter-spacing-main);
+  font-weight: var(--font-weight-main);
+}
