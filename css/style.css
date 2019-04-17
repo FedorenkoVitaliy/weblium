@@ -83,7 +83,141 @@
   color: var(--main-brand);
 }
 
-/*____________MainStyles____________*/
+/*______________Buttons______________*/
+.button {
+  border-radius: 10px;
+  font-size: 9px;
+  line-height: 2.22;
+  text-align: center;
+}
+
+/*___________Buttons Size____________*/
+.button-small {
+  padding: 15px 22px;
+}
+
+.button-medium {
+  padding: 15px 22px;
+}
+
+.button-large {
+  padding: 20px 27px;
+}
+
+/*_____Buttons White Background______*/
+.primary {
+  color: #ffffff;
+  background-color: #11abeb;
+}
+
+.primary:hover {
+  background-color: #17678b;
+}
+
+.primary:active {
+  background-color: #11abeb;
+}
+
+.primary-alt {
+  color: #ffffff;
+  background-color: #17678b;
+}
+
+.primary-alt:hover {
+  background-color: #11abeb;
+}
+
+.primary-alt:active {
+  background-color: #17678b;
+}
+
+.secondary {
+  color: #222222;
+  border: solid 1px #cccccc;
+  background-color: #cccccc;
+}
+
+.secondary:hover {
+  border: solid 1px #4d4d4d;
+  background-color: #4d4d4d;
+}
+
+.secondary:active {
+  background-color: #e9e9e9;
+}
+
+.secondary-alt {
+  color: #222222;
+  background-color: #e9e9e9;
+}
+
+.secondary-alt:hover {
+  background-color: #dedede;
+}
+
+.secondary-alt:active {
+  border: solid 1px #cccccc;
+  background-color: #cccccc;
+}
+
+/*_____Buttons Black Background______*/
+.primary {
+  color: #ffffff;
+  background-color: #11abeb;
+}
+
+.primary:hover {
+  color: #222222;
+  background-color: #ffffff;
+}
+
+.primary:active {
+  background-color: #11abeb;
+}
+
+.primary-alt {
+  color: #222222;
+  background-color: #ffffff;
+}
+
+.primary-alt:hover {
+  color: #ffffff;
+  background-color: #11abeb;
+}
+
+.primary-alt:active {
+  color: #222222;
+  background-color: #ffffff;
+}
+
+.secondary {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+}
+
+.secondary:hover {
+  border: solid 1px #11abeb;
+}
+
+.secondary:active {
+  background-color: #ffffff;
+}
+
+.secondary-alt {
+  color: #222222;
+  background-color: #e9e9e9;
+}
+
+.secondary-alt:hover {
+  background-color: #dedede;
+}
+
+.secondary-alt:active {
+  border: solid 1px #cccccc;
+  background-color: #cccccc;
+}
+
+/*____________MainStyles_____________*/
 body {
   margin: 0;
   min-height: 100vh;
@@ -108,6 +242,42 @@ body * {
   margin: 0 auto;
 }
 
+.hamburger {
+  display: block;
+}
+
+.hamburger .hamburger__line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--main-brand);
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger.is-active .line:nth-child(1),
+.hamburger.is-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger.is-active .line:nth-child(1) {
+  transform: translateY(11px);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+  transform: translateY(-11px) rotate(90deg);
+}
+
 .header {
   z-index: 2;
 }
@@ -117,6 +287,14 @@ body * {
   justify-content: space-between;
   align-items: center;
   height: 160px;
+}
+
+.header .header__content .header__switch {
+  margin: 0 40px 0 auto;
+  padding: 12px 15px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  background: var(--dark-accent);
 }
 
 .header .header__content .header__menu {
