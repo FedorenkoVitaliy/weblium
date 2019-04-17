@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400');
-
-/*____________MainColors____________*/
 :root {
+  /*____________MainColors____________*/
   --light-shades: #ffffff;
   --light-accent: #17678b;
   --main-brand: #11a8e7;
   --dark-accent: #062a38;
   --dark-shades: #222222;
-}
-/*____________Typography____________*/
-:root {
+  /*____________Typography____________*/
   --font-family-main: 'Roboto Slab', serif;
   --font-style-main: normal;
   --font-stretch-main: normal;
   --letter-spacing-main: normal;
   --font-weight-main: normal;
+  /*___________Buttons Size____________*/
+  --button-small: 10px 22px;
+  --button-medium: 10px 22px;
+  --button-large: 15px 27px;
 }
 .hero-title {
   font-size: 60px;
@@ -76,111 +77,147 @@
   color: var(--main-brand);
 }
 /*______________Buttons______________*/
+/*.buttons-contain{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 20px;
+  padding: 40px 20px;
+  &.dark-contain{
+    background-image: linear-gradient(to bottom, #062a38, #062a38),
+    linear-gradient(240deg, #12a5e2, #12a5e2);
+    h4{
+      color: var(--light-shades);
+    }
+  }
+  h4{
+    width: 100%;
+    margin-bottom: 20px;
+    color: var(--dark-shades);
+  }
+}*/
 .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   font-size: 9px;
   line-height: 2.22;
   text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  //transition: 0.3s;
+  border: 1px solid transparent;
 }
 /*___________Buttons Size____________*/
 .button-small{
-  padding: 15px 22px;
+  padding: var(--button-small);
 }
 .button-medium{
-  padding: 15px 22px;
+  padding: var(--button-medium);
 }
 .button-large{
-  padding: 20px 27px;
+  padding: var(--button-large);
 }
-/*_____Buttons White Background______*/
+/*_____Buttons Light Background______*/
 .primary{
-  color: #ffffff;
-  background-color: #11abeb;
+  background: var(--main-brand);
+  color: var(--light-shades);
   &:hover{
-    background-color: #17678b;
+    background: var(--light-accent);
   }
   &:active{
-    background-color: #11abeb;
+    background: var(--main-brand);
+    color: var(--light-shades);
+  }
+  &.alt{
+    background: var(--light-accent);
+    &:hover{
+      background: var(--main-brand);
+    }
+    &:active{
+      background: var(--light-accent);
+    }
   }
 }
-.primary-alt{
-  color: #ffffff;
-  background-color: #17678b;
-  &:hover{
-    background-color: #11abeb;
-  }
-  &:active{
-    background-color: #17678b;
-  }
-}
+//I chose colors for secondary in my opinion.
 .secondary{
-  color: #222222;
-  border: solid 1px #cccccc;
-  background-color: #cccccc;
+  background: var(--light-shades);
+  color: var(--dark-shades);
+  border: 1px solid var(--main-brand);
   &:hover{
-    border: solid 1px #4d4d4d;
-    background-color: #4d4d4d;
+    border: 1px solid var(--dark-accent);
   }
   &:active{
-    background-color: #e9e9e9;
+    background: var(--light-accent);
+    color: var(--light-shades);
+    border: 1px solid var(--light-shades);
+  }
+  &.alt{
+    background: var(--main-brand);
+    color: var(--light-shades);
+    border: 1px solid var(--light-shades);
+    &:hover{
+      background: var(--dark-accent);
+    }
+    &:active{
+      background: var(--main-brand);
+      color: var(--dark-shades);
+      border: 1px solid var(--main-brand);
+    }
   }
 }
-.secondary-alt{
-  color: #222222;
-  background-color: #e9e9e9;
+/*_____Buttons Dark Background______*/
+.primary-dark{
+  background: var(--main-brand);
+  color: var(--light-shades);
   &:hover{
-    background-color: #dedede;
+    background: var(--light-shades);
+    color: var(--dark-shades);
   }
   &:active{
-    border: solid 1px #cccccc;
-    background-color: #cccccc;
+    background: var(--main-brand);
+    color: var(--light-shades);
+  }
+  &.alt{
+    background: var(--light-shades);
+    color: var(--dark-shades);
+    &:hover{
+      background: var(--main-brand);
+      color: var(--light-shades);
+    }
+    &:active{
+      background: var(--light-shades);
+      color: var(--dark-shades);
+    }
   }
 }
-/*_____Buttons Black Background______*/
-.primary{
-  color: #ffffff;
-  background-color: #11abeb;
+.secondary-dark{
+  color: var(--light-shades);
+  border: 1px solid var(--light-shades);
   &:hover{
-    color: #222222;
-    background-color: #ffffff;
+    border: 1px solid var(--main-brand);
   }
   &:active{
-    background-color: #11abeb;
+    background: var(--light-shades);
+    color: var(--dark-shades);
+    border: 1px solid var(--light-shades);
+  }
+  &.alt{
+    border: 1px solid var(--main-brand);
+    &:hover{
+      border: 1px solid var(--light-shades);
+    }
+    &:active{
+      border: 1px solid var(--main-brand);
+      background: var(--main-brand);
+      color: var(--light-shades);
+    }
   }
 }
-.primary-alt{
-  color: #222222;
-  background-color: #ffffff;
-  &:hover{
-    color: #ffffff;
-    background-color: #11abeb;
-  }
-  &:active{
-    color: #222222;
-    background-color: #ffffff;
-  }
-}
-.secondary{
-  color: #ffffff;
-  border: solid 1px #ffffff;
-  &:hover{
-    border: solid 1px #11abeb;
-  }
-  &:active{
-    background-color: #ffffff;
-  }
-}
-.secondary-alt{
-  color: #222222;
-  background-color: #e9e9e9;
-  &:hover{
-    background-color: #dedede;
-  }
-  &:active{
-    border: solid 1px #cccccc;
-    background-color: #cccccc;
-  }
-}
+
 
 /*____________MainStyles_____________*/
 body{
@@ -233,6 +270,7 @@ body{
     transform: translateY(-11px) rotate(90deg);
   }
 }
+
 
 
 .header{
