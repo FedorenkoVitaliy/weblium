@@ -16,17 +16,25 @@
   --button-small: 10px 22px;
   --button-medium: 10px 22px;
   --button-large: 15px 27px;
+  --button-radius: 10px;
 }
 .hero-title {
   font-size: 60px;
   font-weight: 300;
   line-height: 1.2;
   color: var(--dark-shades);
+  &.dark{
+    color: var(--main-brand);
+  }
 }
 .block-title{
   font-size: 30px;
   line-height: 1.33;
   color: var(--dark-shades);
+  margin-bottom: 40px;
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .subtitle{
   font-size: 17px;
@@ -34,6 +42,9 @@
   line-height: 1.53;
   //color: #939393;
   color: var(--dark-shades);//as close as possible
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .heading-large{
   font-size: 70px;
@@ -45,12 +56,18 @@
   font-size: 24px;
   line-height: 1.42;
   color: var(--dark-shades);
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .subheading{
   font-size: 18px;
   font-weight: 300;
   line-height: 1.44;
   color: var(--dark-shades);
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .body-text{
   font-size: 15px;
@@ -58,23 +75,35 @@
   line-height: 1.47;
   //color: #4d4d4d;
   color: var(--dark-shades); //as close as possible
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .caption{
   font-size: 12px;
   line-height: 1.67;
   //color: #939393;
   color: var(--dark-shades); //as close as possible
+  &.dark{
+    color: var(--main-brand);
+  }
 }
 .link{
   font-size: 12px;
   line-height: 1.83;
   color: var(--main-brand);
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 .quote{
   font-size: 24px;
   font-weight: 300;
   line-height: 1.42;
   color: var(--main-brand);
+  &.dark{
+    color: var(--light-shades);
+  }
 }
 /*______________Buttons______________*/
 /*.buttons-contain{
@@ -102,7 +131,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  min-width: 105px;
+  border-radius: var(--button-radius);
   font-size: 9px;
   line-height: 2.22;
   text-align: center;
@@ -236,6 +266,9 @@ body{
     box-sizing: border-box;
   }
 }
+a{
+  text-decoration: none;
+}
 .section>.section__content{
   width: 100%;
   max-width: 1400px;
@@ -243,6 +276,7 @@ body{
 }
 .hamburger{
   display: block;
+  cursor: pointer;
   .hamburger__line{
     width: 40px;
     height: 4px;
@@ -270,26 +304,34 @@ body{
     transform: translateY(-11px) rotate(90deg);
   }
 }
-
-
-
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: var(--light-shades);
+  border-radius: 50%;
+  cursor: pointer;
+}
 .header{
   z-index: 2;
-  .header__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 160px;
-    .header__switch{
-      margin: 0 40px 0 auto;
-      padding: 12px 15px;
-      border-radius: 25px;
-      text-transform: uppercase;
-      background: var(--dark-accent);
-    }
-    .header__menu{
-      display: none;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  height: 160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  .header__switch{
+    margin: 0 40px 0 auto;
+    padding: 12px 15px;
+    border-radius: 25px;
+    text-transform: uppercase;
+  }
+  .header__menu{
+    display: none;
   }
 }
 .welcome{
@@ -298,7 +340,11 @@ body{
   .welcome__content{
     display: flex;
     flex-direction: column;
-    padding: 160px 0;
+    align-items: flex-start;
+    padding: 240px 20px 160px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     .welcome__heading{
       width: 100%;
       max-width: 800px;
@@ -312,40 +358,45 @@ body{
   }
 }
 .about{
-  .about__content{
-    padding: 120px 0;
-    .about__works{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      .works__heading{
+  width: 100%;
+  max-width: 1400px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  .about__works{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .works__heading{
+      width: 100%;
+    }
+    .work{
+      width: 100%;
+      max-width: calc((100% - 90px) / 4);
+      .work__img{
+        height: 420px;
         width: 100%;
+        margin-bottom: 30px;
+        border-radius: 6px;
+        background: var(--main-brand);
       }
-      .work{
-        width: 100%;
-        max-width: calc((100% - 90px) / 4);
-        .work__img{
-          height: 420px;
-          width: 100%;
-          margin-bottom: 30px;
-          border-radius: 6px;
-          background: var(--main-brand);
-        }
-        .work__heading{
-          margin-bottom: 10px;
-        }
+      .work__heading{
+        margin-bottom: 10px;
       }
     }
-    .about__us{
-      display: flex;
-      margin-top: 120px;
-      .aboutUs__slogan{
-        width: calc(100% - 640px);
-      }
-      .aboutUs__content{
-        width: 100%;
-        max-width: 560px;
+  }
+  .about__us{
+    display: flex;
+    margin-top: 120px;
+    .aboutUs__slogan{
+      width: calc(100% - 600px);
+      color: var(--dark-shades);
+    }
+    .aboutUs__content{
+      width: 100%;
+      max-width: 560px;
+      .aboutUs__description{
+        margin-bottom: 30px;
       }
     }
   }
@@ -365,6 +416,7 @@ body{
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      align-items: center;
       width: 100%;
       max-width: calc((100% - 90px) / 4);
       margin-bottom: 40px;
@@ -383,6 +435,7 @@ body{
         margin-bottom: 30px;
       }
       .package__description{
+        text-align: center;
         margin-bottom: 80px;
       }
     }
@@ -395,7 +448,10 @@ body{
     padding: 120px;
     .advantages__header{
       width: 100%;
-      max-width: 370px;
+      max-width: 375px;
+      .advantages__heading{
+        margin-bottom: 45px;
+      }
     }
     .advantages__wrapper{
       display: flex;
@@ -405,14 +461,14 @@ body{
       max-width: calc(100% - 420px);
       .advantage{
         width: 100%;
-        width: calc((100% - 60px)/3);
+        max-width: calc((100% - 60px)/3);
         margin-bottom: 65px;
         .advantage__img{
           background: var(----main-brand);
           margin-bottom: 30px;
         }
         .advantage__title{
-          margin-top: 20px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -462,7 +518,9 @@ body{
   .feedback__heading{
     width: 100%;
     span{
+      display: block;
       max-width: 700px;
+      margin-bottom: 70px;
     }
   }
   .feedback__contact{
@@ -479,6 +537,7 @@ body{
   .feedback__form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 655px;
     input, textarea{
@@ -506,8 +565,19 @@ body{
   .footer__content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    &.footer__main{
+      margin-bottom: 50px;
+    }
+    .footer__logo{
+      margin-top: -40px;
+    }
+    .footer__slogan{
+      width: 100%;
+      max-width: 550px;
+    }
   }
 }
