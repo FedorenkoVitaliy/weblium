@@ -199,12 +199,13 @@ a {
   margin: 0 auto;
 }
 
-.hamburger {
+#hamburger {
   display: block;
   cursor: pointer;
+  z-index: 3;
 }
 
-.hamburger .hamburger__line {
+#hamburger .hamburger__line {
   width: 40px;
   height: 4px;
   background-color: var(--main-brand);
@@ -213,26 +214,26 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger.is-active {
+#hamburger.active {
   transition: all 0.3s ease-in-out;
   transition-delay: 0.6s;
   transform: rotate(45deg);
 }
 
-.hamburger.is-active .line:nth-child(2) {
+#hamburger.active .hamburger__line:nth-child(2) {
   width: 0px;
 }
 
-.hamburger.is-active .line:nth-child(1),
-.hamburger.is-active .line:nth-child(3) {
+#hamburger.active .hamburger__line:nth-child(1),
+#hamburger.active .hamburger__line:nth-child(3) {
   transition-delay: 0.3s;
 }
 
-.hamburger.is-active .line:nth-child(1) {
+#hamburger.active .hamburger__line:nth-child(1) {
   transform: translateY(11px);
 }
 
-.hamburger.is-active .line:nth-child(3) {
+#hamburger.active .hamburger__line:nth-child(3) {
   transform: translateY(-11px) rotate(90deg);
 }
 
@@ -267,7 +268,26 @@ a {
 }
 
 .header .header__menu {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: -400px;
+  height: auto;
+  width: 200px;
+  border: none;
+  z-index: 2;
+  padding: 120px 30px 40px;
+  transition: 0.6s;
+}
+
+.header .header__menu.active {
+  right: 0;
+  transition: 0.6s;
+}
+
+.header .header__menu a {
+  display: block;
+  cursor: pointer;
+  text-align: right;
 }
 
 .welcome {
@@ -429,8 +449,15 @@ a {
 }
 
 .advantages .advantages__content .advantages__wrapper .advantage .advantage__img {
-  background: var(----main-brand);
   margin-bottom: 30px;
+}
+
+.advantages .advantages__content .advantages__wrapper .advantage .advantage__img rect {
+  fill: var(--main-brand);
+}
+
+.advantages .advantages__content .advantages__wrapper .advantage .advantage__img path {
+  fill: var(--light-shades);
 }
 
 .advantages .advantages__content .advantages__wrapper .advantage .advantage__title {
@@ -463,6 +490,14 @@ a {
 
 .reviews .review .review__icon {
   margin-bottom: 15px;
+}
+
+.reviews .review .review__icon rect {
+  fill: var(--light-shades);
+}
+
+.reviews .review .review__icon path {
+  fill: var(--main-brand);
 }
 
 .reviews .review .review__author {
@@ -509,6 +544,10 @@ a {
 
 .feedback .feedback__contact .contact__element .contact__heading {
   margin-bottom: 20px;
+}
+
+.feedback .feedback__contact .contact__element .contact__link svg path {
+  fill: var(--dark-shades);
 }
 
 .feedback .feedback__form {
@@ -565,4 +604,8 @@ a {
 .footer .footer__content .footer__slogan {
   width: 100%;
   max-width: 550px;
+}
+
+.footer .footer__content .footer__social svg path {
+  fill: var(--light-shades);
 }
