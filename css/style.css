@@ -1,127 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400");
-:root {
-  /*____________MainColors____________*/
-  --light-shades: #ffffff;
-  --light-accent: #17678b;
-  --main-brand: #11a8e7;
-  --dark-accent: #062a38;
-  --dark-shades: #222222;
-  /*____________Typography____________*/
-  --font-family-main: 'Roboto Slab', serif;
-  --font-style-main: normal;
-  --font-stretch-main: normal;
-  --letter-spacing-main: normal;
-  --font-weight-main: normal;
-  /*___________Buttons Size____________*/
-  --button-small: 10px 22px;
-  --button-medium: 10px 22px;
-  --button-large: 15px 27px;
-  --button-radius: 10px;
-}
-
-.hero-title {
-  font-size: 60px;
-  font-weight: 300;
-  line-height: 1.2;
-  color: var(--dark-shades);
-}
-
-.hero-title.dark {
-  color: var(--main-brand);
-}
-
-.block-title {
-  font-size: 30px;
-  line-height: 1.33;
-  color: var(--dark-shades);
-  margin-bottom: 40px;
-}
-
-.block-title.dark {
-  color: var(--light-shades);
-}
-
-.subtitle {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.53;
-  color: var(--dark-shades);
-}
-
-.subtitle.dark {
-  color: var(--light-shades);
-}
-
-.heading-large {
-  font-size: 70px;
-  font-weight: 100;
-  line-height: 1.14;
-  color: var(--main-brand);
-}
-
-.heading {
-  font-size: 24px;
-  line-height: 1.42;
-  color: var(--dark-shades);
-}
-
-.heading.dark {
-  color: var(--light-shades);
-}
-
-.subheading {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.44;
-  color: var(--dark-shades);
-}
-
-.subheading.dark {
-  color: var(--light-shades);
-}
-
-.body-text {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.47;
-  color: var(--dark-shades);
-}
-
-.body-text.dark {
-  color: var(--light-shades);
-}
-
-.caption {
-  font-size: 12px;
-  line-height: 1.67;
-  color: var(--dark-shades);
-}
-
-.caption.dark {
-  color: var(--main-brand);
-}
-
-.link {
-  font-size: 12px;
-  line-height: 1.83;
-  color: var(--main-brand);
-}
-
-.link.dark {
-  color: var(--light-shades);
-}
-
-.quote {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.42;
-  color: var(--main-brand);
-}
-
-.quote.dark {
-  color: var(--light-shades);
-}
-
 /*______________Buttons______________*/
 /*.buttons-contain{
   display: flex;
@@ -148,9 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 105px;
   border-radius: var(--button-radius);
-  font-size: 9px;
   line-height: 2.22;
   text-align: center;
   text-transform: uppercase;
@@ -160,15 +35,21 @@
 
 /*___________Buttons Size____________*/
 .button-small {
-  padding: var(--button-small);
+  padding: var(--button-small-padding);
+  font-size: var(--button-small-font-size);
+  min-width: var(--button-medium-width);
 }
 
 .button-medium {
-  padding: var(--button-medium);
+  padding: var(--button-medium-padding);
+  font-size: var(--button-medium-font-size);
+  min-width: var(--button-medium-width);
 }
 
 .button-large {
-  padding: var(--button-large);
+  padding: var(--button-large-padding);
+  font-size: var(--button-large-font-size);
+  min-width: var(--button-large-width);
 }
 
 /*_____Buttons Light Background______*/
@@ -300,7 +181,6 @@ body {
   font-style: var(--font-style-main);
   font-stretch: var(--font-stretch-main);
   letter-spacing: var(--letter-spacing-main);
-  font-weight: var(--font-weight-main);
 }
 
 body * {
@@ -382,7 +262,7 @@ a {
 .header .header__switch {
   margin: 0 40px 0 auto;
   padding: 12px 15px;
-  border-radius: 25px;
+  font-size: 9px;
   text-transform: uppercase;
 }
 
@@ -502,7 +382,7 @@ a {
 }
 
 .pricing .pricing__content .package:hover {
-  background: var(--light-accent);
+  background: var(--dark-shades);
   border: 1px solid var(--light-shades);
 }
 

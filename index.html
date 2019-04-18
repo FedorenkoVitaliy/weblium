@@ -6,12 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weblium</title>
+    <link id="template" href="css/blue.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header class="header">
         <a href="#" class="header__logo logo heading">Logo</a>
-        <div class="header__switch button button-small primary-dark alt">orange theme</div>
+        <button value="blue" id="themeSwitcher" class="header__switch button button-small primary-dark">orange theme</button>
         <div class="header__menuSwitcher hamburger">
             <span class="hamburger__line"></span>
             <span class="hamburger__line"></span>
@@ -104,7 +105,22 @@
             </div>
             <div class="advantages__wrapper">
                 <figure class="advantages__item advantage">
-                    <img src="#" alt="" class="advantage__img">
+                    <img src="img/icon.svg" alt="advantage-img" class="svg advantage__img">
+                    <figcaption class="advantage__title heading">Super Organized</figcaption>
+                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
+                </figure>
+                <figure class="advantages__item advantage">
+                    <img src="img/icon.svg" alt="advantage-img" class="svg advantage__img">
+                    <figcaption class="advantage__title heading">Super Organized</figcaption>
+                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
+                </figure>
+                <figure class="advantages__item advantage">
+                    <img src="img/icon.svg" alt="advantage-img" class="svg advantage__img">
+                    <figcaption class="advantage__title heading">Super Organized</figcaption>
+                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
+                </figure>
+                <figure class="advantages__item advantage">
+                    <img src="img/icon.svg" alt="advantage-img" class="svg advantage__img">
                     <figcaption class="advantage__title heading">Super Organized</figcaption>
                     <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
                 </figure>
@@ -114,22 +130,7 @@
                     <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
                 </figure>
                 <figure class="advantages__item advantage">
-                    <img src="#" alt="" class="advantage__img">
-                    <figcaption class="advantage__title heading">Super Organized</figcaption>
-                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
-                </figure>
-                <figure class="advantages__item advantage">
-                    <img src="#" alt="" class="advantage__img">
-                    <figcaption class="advantage__title heading">Super Organized</figcaption>
-                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
-                </figure>
-                <figure class="advantages__item advantage">
-                    <img src="#" alt="" class="advantage__img">
-                    <figcaption class="advantage__title heading">Super Organized</figcaption>
-                    <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
-                </figure>
-                <figure class="advantages__item advantage">
-                    <img src="#" alt="" class="advantage__img">
+                    <img src="img/icon.svg" alt="advantage-img" class="svg advantage__img">
                     <figcaption class="advantage__title heading">Super Organized</figcaption>
                     <p class="advantage__description subheading">Since wire-frame renderings are relatively simple and fast to do</p>
                 </figure>
@@ -139,25 +140,25 @@
     <section class="reviews">
         <h3 class="reviews__heading block-title">Testimonials</h3>
         <article class="reviews__element review">
-            <img src="img/author.png" alt="" class="review__icon">
+            <img src="img/icon.svg" alt="author" class="svg review__icon">
             <p class="review__author subheading dark">Lassy Chester</p>
             <p class="review__position body-text dark">Art Director</p>
             <p class="review__description subheading dark">“Amazing experience i love it a lot. Thanks to the team that dreams come true, great! Really appreciate there approach”</p>
         </article>
         <article class="reviews__element review">
-            <img src="img/author.png" alt="" class="review__icon">
+            <img src="img/icon.svg" alt="author" class="svg review__icon">
             <p class="review__author subheading dark">Lassy Chester</p>
             <p class="review__position body-text dark">Art Director</p>
             <p class="review__description subheading dark">“Amazing experience i love it a lot. Thanks to the team that dreams come true, great! Really appreciate there approach”</p>
         </article>
         <article class="reviews__element review">
-            <img src="img/author.png" alt="" class="review__icon">
+            <img src="img/icon.svg" alt="author" class="svg review__icon">
             <p class="review__author subheading dark">Lassy Chester</p>
             <p class="review__position body-text dark">Art Director</p>
             <p class="review__description subheading dark">“Amazing experience i love it a lot. Thanks to the team that dreams come true, great! Really appreciate there approach”</p>
         </article>
         <article class="reviews__element review">
-            <img src="img/author.png" alt="" class="review__icon">
+            <img src="img/icon.svg" alt="author" class="svg review__icon">
             <p class="review__author subheading dark">Lassy Chester</p>
             <p class="review__position body-text dark">Art Director</p>
             <p class="review__description subheading dark">“Amazing experience i love it a lot. Thanks to the team that dreams come true, great! Really appreciate there approach”</p>
@@ -178,16 +179,22 @@
             </div>
             <div class="contact__element">
                 <p class="contact__heading heading">Socials</p>
-                <a href="#" class="contact__link"><img src="" alt=""></a>
-                <a href="#" class="contact__link"><img src="" alt=""></a>
-                <a href="#" class="contact__link"><img src="" alt=""></a>
+                <a href="#" class="contact__link">
+                    <img src="img/insta.svg" alt="instagram" class="svg">
+                </a>
+                <a href="#" class="contact__link">
+                    <img src="img/fb.svg" alt="facebook" class="svg">
+                </a>
+                <a href="#" class="contact__link">
+                    <img src="img/google.svg" alt="google" class="svg">
+                </a>
             </div>
         </div>
         <form action="" class="feedback__form">
             <input type="email" class="feedback__mail body-text">
             <input type="text" class="feedback__subject body-text">
             <textarea name="" id="" cols="30" rows="10" class="feedback__message body-text"></textarea>
-            <button class="feedback__button button button-large primary alt">Send</button>
+            <button class="feedback__button button button-medium primary">Send</button>
         </form>
     </section>
 <!--    <section class="buttons-contain">
@@ -216,12 +223,21 @@
         <div class="footer__content">
             <p class="footer__copyright link dark">© 2018. All rights reserved</p>
             <div class="footer__social social">
-                <a href="#" class="social__element"><img src="" alt=""></a>
-                <a href="#" class="social__element"><img src="" alt=""></a>
-                <a href="#" class="social__element"><img src="" alt=""></a>
-                <a href="#" class="social__element"><img src="" alt=""></a>
+                <a href="#" class="social__element">
+                    <img src="img/twit.svg" alt="twitter" class="svg">
+                </a>
+                <a href="#" class="social__element">
+                    <img src="img/fb.svg" alt="facebook" class="svg">
+                </a>
+                <a href="#" class="social__element">
+                    <img src="img/google.svg" alt="google" class="svg">
+                </a>
+                <a href="#" class="social__element">
+                    <img src="img/insta.svg" alt="instagram" class="svg">
+                </a>
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
